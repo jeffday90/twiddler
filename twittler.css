@@ -1,9 +1,9 @@
 html {
     background-color: tan;
     background-image: url("https://i.imgur.com/Oya6hs5.gif");
-    background-repeat: no-repeat;
     background-blend-mode: soft-light;
     background-position: center;
+    font-family: 'courier' thick;
 }
 
 
@@ -14,6 +14,8 @@ body {
 #main {
     border: outset;
     border color: black;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-radius: 25px;
 }
 
 textarea {
@@ -24,39 +26,26 @@ textarea {
 
 p {
   font-size: 24px;
-}
 
-
-h1 {
-    font-size: 100;
-    text-align: center;
-    color: gold;
-    font-family: "Times New Roman", Times, serif;
 }
 
 h2 {
     font-size: 100px;
     text-align: center;
-    color: yellow;
-    font-family: "Times New Roman", Times, serif;
+    color: black;
     margin-top: auto;
-    padding-bottom: 10px;
-    border-bottom: 5px;
     border-bottom-style: outset;
 }
 
 h3 {
     font-size: 25px;
-    margin-top: 10px;
     text-align: center;
-   color: #ea503f;
    font-family: courier;
+    
 }
 
 h4 {
-    font-family: fantasy;
-    font-language-override: normal;
-    margin-top: 100px;
+    margin-bottom: 2px;
 }
 
 h6 {
@@ -73,7 +62,6 @@ h6 {
 }
 
 #stream {
-    font-family: 'Helvetica', sans-serif;
     margin-bottom: 200px;
     margin-top: 100px;
 }
@@ -83,15 +71,33 @@ h6 {
     margin-bottom: 30px;
 }
 
-.twiddle {
-    margin-left: 300px;
+.tweet {
+
+    border-radius: 25px;
+    margin: 40px;
+    background-color: tan;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-width: thick;
+    height: 40px;
     margin-top: 5px;
-	border-top: 2px solid black;
-	border-radius: 1px;
-	font-size: 15px;
-	white-space: pre-wrap;
-    margin-right: 320px;
     
+    
+    
+    
+    
+    
+/*
+    
+    
+    
+  background: tan;
+  padding: 20px; 
+  width: 600px;
+  height: 40px; 
+    border-style: outset;
+    border-collapse: inherit;
+
+*/
 }
 
 button {
@@ -114,4 +120,11 @@ button {
 	font-family: 'Times New Roman', monospace;
 	font-size: 5em;
 	font-weight: 100;
+}
+
+.date {
+    opacity: .5;
+    text-align: center;
+    font-size: 8px;
+    border-style: 1px  outset  #d2e3ed;
 }

@@ -15,7 +15,7 @@
         <h2>Twiddler</h2>
       </div>
       <div id="twiddleEntry">
-        <p>Enter your thoughts here:</p>
+        <h3>Enter your thoughts here:<h3>
         <textarea></textarea>
         <button>Plug on in, buddy!</button>
       </div>
@@ -33,22 +33,30 @@
   </body>
     <script>
         $(document).ready(function(){ 
-        var $stream = $('#stream').hide(300).show(1000);
+        var $stream = $('#stream').slideDown(1000);
         $stream.html('');
         var index = streams.home.length - 1;
         while(index >= 0){
-          var twiddle = streams.home[index];
-          var $twiddle = $('<div></div>');
-          $twiddle.addClass('twiddle');
-          $twiddle.text('@' + twiddle.user + ': ' + 
-            twiddle.message + 
-            ('0' + twiddle.created_at.getMonth() + 1).slice(-2) + '/' + 
-            ('0' + twiddle.created_at.getDate()).slice(-2) + '/' + 
-            twiddle.created_at.getFullYear() + ' ' + 
-            ('0' + twiddle.created_at.getHours()).slice(-2) + ':' + 
-            ('0' + twiddle.created_at.getMinutes()).slice(-2));
-          $twiddle.appendTo($stream);
+          var tweet = streams.home[index];
+          var $tweet = $('<div></div>');
+          $tweet.addClass('tweet');
+          $tweet.text('@' + tweet.user + ': ' + 
+            tweet.message);
+            
+            var $date = $('<div></div>');
+            $date.addClass('date');
+            $date.text('\n\nTwiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
+                       (tweet.created_at.getDate()) + '-' + 
+                       (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()) 
+//                        (tweet.created_at.getMinutes()).slice(-2)
+                    );
+          $tweet.appendTo($stream);
+           $date.appendTo($tweet);
           index -= 1;
+            
+            
+            
+            
         }
       });
     </script>
