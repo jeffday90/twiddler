@@ -12,24 +12,18 @@
   <body>
     <div id="main">
       <div id="header">
-        <h2>Twiddler</h2>
+        <h2>Twiddler</h1>
+          <h3>By: Jeff Day</h2>
       </div>
-      <div id="twiddleEntry">
-        <p>Enter your thoughts here:</p>
+      <div id="messageEntry">
+        <p>MY_THOUGHT:</p>
         <textarea></textarea>
-        <button>Plug on in, buddy!</button>
+        <button>Share</button>
       </div>
-        <div id="twiddleTitle">
-            <h4>OTHER TWIDDLES:</h4>
-        </div>
       <div id="stream">
-          <p></p>
       </div>
 
     </div>
-      <div id="footer">
-        <h6>By: Jeff Day ©</h6>
-      </div>
   </body>
     <script>
 
@@ -48,6 +42,7 @@
             tweet.created_at.getFullYear() + ' ' + 
             ('0' + tweet.created_at.getHours()).slice(-2) + ':' + 
             ('0' + tweet.created_at.getMinutes()).slice(-2));
+          //What about AM or PM?
           $tweet.appendTo($stream);
           index -= 1;
         }

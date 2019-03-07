@@ -1,31 +1,68 @@
-body {
+html {
     background-color: tan;
-    font-family: "Papyrus";
     background-image: url("https://i.imgur.com/Oya6hs5.gif");
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
     background-position: center;
+    font-family: 'Chakra Petch', monospace;
 }
+
+
+body {
+    margin: 8px;
+}
+
+#main {
+    border: outset;
+    border color: black;
+}
+
+textarea {
+  width: 300px;
+  height: 15px;
+    text-align: 300px;
+}
+
+p {
+  font-size: 24px;
+}
+
 
 h1 {
     font-size: 100;
     text-align: center;
+    color: gold;
+    font-family: "Times New Roman", Times, serif;
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 100px;
     text-align: center;
-    margin-bottom: inherit;
+    color: yellow;
+    font-family: "Times New Roman", Times, serif;
+    margin-top: auto;
+    padding-bottom: 10px;
+    border-bottom: 5px;
+    border-bottom-style: outset;
 }
 
 h3 {
     font-size: 25px;
     margin-top: 10px;
     text-align: center;
+   color: #ea503f;
+   font-family: courier;
 }
 
 h4 {
+    font-family: fantasy;
+    font-language-override: normal;
+    margin-top: 100px;
+}
+
+h6 {
     text-align: right;
+    font-size: 10px;
 }
 
 .imageProp {
@@ -37,11 +74,44 @@ h4 {
 }
 
 #stream {
-	grid-row: 3 / span 5;
-	grid-column: 3 / span 4;
-	overflow: scroll;
-	animation: streamLighting 60s linear;
-	animation-direction: alternate;
-	animation-iteration-count: infinite;
+    font-family: 'Helvetica', sans-serif;
+    margin-bottom: 200px;
+    margin-top: 100px;
 }
 
+#twiddleEntry {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.tweet {
+    margin-left: 200px;
+    margin-top: 5px;
+	border-top: 2px solid black;
+	padding: 10px 10px 5px 10px;
+	border-radius: 2px;
+	font-size: 15px;
+	white-space: pre-wrap;
+}
+
+button {
+    color: black;
+}
+
+
+#twiddleTitle {
+    text-align: center;
+    font-feature-settings: normal;
+}
+
+#header { 
+	grid-row: 1;
+	grid-column: 3 / span 4;
+}
+
+#header h1 {
+	text-align: center;
+	font-family: 'Times New Roman', monospace;
+	font-size: 5em;
+	font-weight: 100;
+}
