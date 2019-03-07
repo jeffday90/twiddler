@@ -37,17 +37,17 @@
         $stream.html('');
         var index = streams.home.length - 1;
         while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.addClass('tweet');
-          $tweet.text('@' + tweet.user + ': ' + 
-            tweet.message + 
-            ('0' + tweet.created_at.getMonth() + 1).slice(-2) + '/' + 
-            ('0' + tweet.created_at.getDate()).slice(-2) + '/' + 
-            tweet.created_at.getFullYear() + ' ' + 
-            ('0' + tweet.created_at.getHours()).slice(-2) + ':' + 
-            ('0' + tweet.created_at.getMinutes()).slice(-2));
-          $tweet.appendTo($stream);
+          var twiddle = streams.home[index];
+          var $twiddle = $('<div></div>');
+          $twiddle.addClass('twiddle');
+          $twiddle.text('@' + twiddle.user + ': ' + 
+            twiddle.message + 
+            ('0' + twiddle.created_at.getMonth() + 1).slice(-2) + '/' + 
+            ('0' + twiddle.created_at.getDate()).slice(-2) + '/' + 
+            twiddle.created_at.getFullYear() + ' ' + 
+            ('0' + twiddle.created_at.getHours()).slice(-2) + ':' + 
+            ('0' + twiddle.created_at.getMinutes()).slice(-2));
+          $twiddle.appendTo($stream);
           index -= 1;
         }
       });
