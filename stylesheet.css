@@ -1,9 +1,15 @@
 html {
-    background-color: #85e5c2;
+    background:
+        linear-gradient(red, transparent),
+        linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
+    background-blend-mode: screen;
 }
+
+/* formatting */
+
 header{
     border: solid;
-    background-image: url("https://i.imgur.com/Oya6hs5.gif");
     border-color: black;
     background-blend-mode: soft-light;
     border-radius: 25px;
@@ -11,6 +17,11 @@ header{
     margin-right: 20%;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     border-width: thick;
+    background-color: #F9F5F1;
+/*
+    margin-left: 20%;
+    margin-right: 20%;
+*/
 }
 
 section,
@@ -27,9 +38,11 @@ section {
     border: solid;
     border-width: thick;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    background-image: url("https://i.imgur.com/Oya6hs5.gif");
     background opacity: .25;
+    border-radius: 25px;
+    background-color: #a1d471;
 }
+
 aside {
     float: right;
     width: 30%;
@@ -43,19 +56,68 @@ footer {
     clear: both;
     margin-bottom: 0;
     color: #648880;
-    background color: black;
+
 }
 
+/* text blocks */
+
+
+
+
 h2 {
-    font-size: 50px;
-    text-align: center;
-    color: black;
+    font-size: 70px;
     font-family: Georgia, Times, "Times New Roman", serif;
+/*
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+*/
+    text-align: center;
+    display: inline;
+	position: relative;
+    letter-spacing: -5px;
+	color: rgba(0,0,255,0.5); 
+}
+
+h2:after {
+    content: "Twiddler";
+	position: absolute; left: 1px; top: 2px;
+	color: rgba(255,0,0,0.5);   
 }
 
 h3 {
     margin-top: 10px;
     font-size: 10px;
+}
+
+h4 {
+    font-size: 50px;
+    display: inline;
+	position: relative;
+    letter-spacing: -5px;
+	color: rgba(0,0,255,0.5);
+    border-radius: 25px;
+    background color: white;
+    border: solid;
+    border-width: thick;
+    border-color: black;
+    background-color: #F9F5F1;
+    margin-left: 30px;
+}
+
+h4:after {
+    content: "Twiddler";
+	position: absolute; left: 1px; top: 2px;
+	color: rgba(255,0,0,0.5);   
 }
 
 h5 {
@@ -64,13 +126,9 @@ h5 {
     font-family: Georgia, Times, "Times New Roman", serif;
     margin-bottom: 30px;
     display: inline;
-    border: solid;
-    border-color: black;
-    background: white;
     color: black;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     margin-top: 20px;
-    
+    margin-left: 5%;
 }
 
 h6 {
@@ -80,15 +138,79 @@ h6 {
 }
 
 h7 {
-    margin: center;
+    text-align: right;
     font-size: 10px;
+    font-family: 'Papyrus', fantasy;
 }
+
+/*title bar above tweet */
+
+#twiddleTitle {
+    text-align: 50%;
+    font-feature-settings: normal;
+    border: thick;
+    margin-top: 20px;
+   
+}
+
+/* tweet */
+
 
 #stream {
     margin-left: -20%;
     height: 400px;
     overflow-y: scroll;
 }
+
+.date {
+    opacity: .5;
+    text-align: right;
+    font-size: 8px;
+}
+
+.userName {
+    text-align: left;
+    font-weight: 600;
+    line-height: 22px;
+    font: 13px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #648880;
+}
+
+.userName:hover {
+    color: #a9b2b9;
+    transition:400ms ease all;
+}
+
+.tweet {
+    margin-left: 20%;
+    margin-right: 3%;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-width: thick;
+    height: 30px;
+    margin-top: 15px;
+    border: solid;
+    text-align: center;
+    border-collapse: inherit;
+    background: #F9F5F1;
+    border-radius: 10px;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    
+/*
+    
+    
+    
+  background: tan;
+  padding: 20px; 
+  width: 600px;
+  height: 40px; 
+    border-style: outset;
+    
+
+*/
+}
+
+/*left-pannel*/
+
 
 #twiddleEntry {
     margin-right 100px;
@@ -108,32 +230,7 @@ h7 {
     text-align: left;
 }
 
-.tweet {
-    margin-left: 20%;
-    margin-right: 3%;
-    background-color: white;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    border-width: thick;
-    height: 30px;
-    margin-top: 15px;
-    border: solid;
-    text-align: left;
-    border-collapse: inherit;
-    
-    
-/*
-    
-    
-    
-  background: tan;
-  padding: 20px; 
-  width: 600px;
-  height: 40px; 
-    border-style: outset;
-    
-
-*/
-}
+/* button */
 
 button{
     background: skyblue;
@@ -173,19 +270,4 @@ button:after{
 }
 button:hover:before,button:hover:after{
   width:100%;
-}
-
-
-#twiddleTitle {
-    text-align: 50%;
-    font-feature-settings: normal;
-    border: thick;
-    margin-top: 20px;
-}
-
-
-.date {
-    opacity: .5;
-    text-align: right;
-    font-size: 8px;
 }
