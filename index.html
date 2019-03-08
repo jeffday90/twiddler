@@ -11,11 +11,12 @@
             <h7>------your friendly neighborhood twitter knock-off*</h7>
     </header>
       <div id="twiddleTitle">
-            <h5>the Twiddler Stream:</h5>
+          <h5>the </h5>
+                <h4 style="display:inline">Twiddler</h4>
+            <h5>Stream:</h5>
       </div>
     <section>
         <div id="stream">
-          <p></p>
         </div>
     </section>
     <aside>
@@ -37,7 +38,7 @@
     
     
 
-    <script>
+    <script> 
         $(document).ready(function(){ 
                 tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
                 setInterval(tweetRun, 5000);
@@ -52,22 +53,25 @@
                 var tweet = streams.home[index];
                 var $tweet = $('<div></div>');
                 $tweet.addClass('tweet');
-                $tweet.text('@' + tweet.user + ': ' + 
-                tweet.message);
+                $tweet.text(tweet.message);
+                
+                var $userName = $('<div></div>');
+                $userName.addClass('userName');
+                $userName.text('@' + tweet.user).css("float","left");
             
                 var $date = $('<div></div>');
                 $date.addClass('date');
-                $date.text('\n\nTwiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
+                $date.text('Twiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
                        (tweet.created_at.getDate()) + '-' + 
-                       (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()) 
-//                        (tweet.created_at.getMinutes()).slice(-2)
-                );
+                       (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()));
             
             $tweet.appendTo($stream);
+            $userName.prependTo($tweet);
             $date.appendTo($tweet);
-          index -= 1;    
+            index -= 1;    
             }
         }
+         
     </script>
   </body>
     
