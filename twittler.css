@@ -1,9 +1,8 @@
 html {
     background-color: tan;
-    background-image: url("https://i.imgur.com/Oya6hs5.gif");
-    background-blend-mode: soft-light;
     background-position: center;
     font-family: 'courier' thick;
+    background: white;
 }
 
 
@@ -12,78 +11,130 @@ body {
 }
 
 #main {
-    border: outset;
-    border color: black;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     border-radius: 25px;
+    background: gray;
+    background-blend-mode: soft-light;
+    border: thick;
+    border color: black;
 }
 
+
+#header { 
+    border: solid;
+    background-image: url("https://i.imgur.com/Oya6hs5.gif");
+    border-color: black;
+    border-radius: 25px;
+    border-radius: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-width: thick;
+
+}
+
+
+
 textarea {
-  width: 300px;
-  height: 15px;
+    width: 200px;
+    height: 15px;
     text-align: 300px;
 }
 
+
 p {
   font-size: 24px;
-
 }
 
 h2 {
     font-size: 100px;
     text-align: center;
     color: black;
-    margin-top: auto;
-    border-bottom-style: outset;
+    margin-top: 100px;
+    font-family: 'Papyrus', fantasy;
 }
 
 h3 {
-    font-size: 25px;
-    text-align: center;
-   font-family: courier;
-    
+    margin-top: 10px;
+    font-size: 10px;
 }
 
-h4 {
-    margin-bottom: 2px;
+h5 {
+    font-size: 25px;
+    text-align: center;
+    font-family: courier;
+    margin-bottom: 10px;
+    display: inline;
+    
 }
 
 h6 {
     text-align: right;
     font-size: 10px;
+    color: black;
 }
 
-.imageProp {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-    opacity: 0.25
+h7 {
+    margin: center;
+    font-size: 10px;
 }
 
 #stream {
-    margin-bottom: 200px;
-    margin-top: 100px;
+    margin: auto;
 }
 
 #twiddleEntry {
-    text-align: center;
+    margin-right 100px;
     margin-bottom: 30px;
+    margin-top: auto;
+    margin-left: inherit;
+    text-align: right;
+}
+
+.container {
+    width: 80%;
+    height: 100px;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.one {
+    width: 15%;
+    height: 200px;
+    background: red;
+    float: left;
+    margin-bottom: 20px;
+}
+
+.two {
+    margin-right: 30%;
+    background: black;
+}
+
+
+#signInEntry {
+    margin-right 100px;
+    margin-bottom: 30px;
+    margin-top: auto;
+    margin-left: inherit;
+    text-align: left;
 }
 
 .tweet {
 
     border-radius: 25px;
-    margin: 40px;
-    background-color: tan;
+    margin-left: 25%;
+    margin-right: 25%;
+    background-color: skyblue;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     border-width: thick;
     height: 40px;
     margin-top: 5px;
-    
-    
-    
-    
+    border: solid;
+    text-align: center;
+    border-collapse: inherit;
     
     
 /*
@@ -95,32 +146,64 @@ h6 {
   width: 600px;
   height: 40px; 
     border-style: outset;
-    border-collapse: inherit;
+    
 
 */
 }
 
-button {
+button{
+    background: skyblue;
     color: black;
+    border:outset;
+    border-radius: 25px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    position:relative;
+    height:30px;
+    font-size:1em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    text-align: center;
 }
 
+button:hover{
+    background: 00FFFF;
+    color:gray;
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+}
+
+
+#refresh {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
 
 #twiddleTitle {
     text-align: center;
     font-feature-settings: normal;
+    border: thick;
 }
 
-#header { 
-	grid-row: 1;
-	grid-column: 3 / span 4;
-}
-
-#header h1 {
-	text-align: center;
-	font-family: 'Times New Roman', monospace;
-	font-size: 5em;
-	font-weight: 100;
-}
 
 .date {
     opacity: .5;

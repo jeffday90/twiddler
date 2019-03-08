@@ -1,6 +1,3 @@
-
-
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,19 +10,27 @@
     <div id="main">
       <div id="header">
         <h2>Twiddler</h2>
+        <h7>------your friendly neighborhood twitter knock-off*</h7>
       </div>
-      <div id="twiddleEntry">
-        <h3>Enter your thoughts here:<h3>
-        <textarea></textarea>
-        <button>Plug on in, buddy!</button>
-      </div>
+        <section class="container">
+            <div class="signInEntry">
+                <textarea>Enter your tWiDdLe HaNdLe:</textarea>
+                <button>Sign In</button>
+        </div>
+             <div class="twiddleEntry">
+                <textarea>What's on your mind?!?!?</textarea>
+                <button>Twiddle away, buddy!</button>
+        </div>
+       </section>
         <div id="twiddleTitle">
-            <h4>OTHER TWIDDLES:</h4>
+            <h5>The TWIDDLE Stream:</h5>
         </div>
       <div id="stream">
           <p></p>
       </div>
-
+        <div id = "refresh">
+        <button>Refresh the page</button>
+        </div>
     </div>
       <div id="footer">
         <h6>by: Jeff Day ©</h6>
@@ -50,14 +55,18 @@
                        (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()) 
 //                        (tweet.created_at.getMinutes()).slice(-2)
                     );
+            
           $tweet.appendTo($stream);
            $date.appendTo($tweet);
-          index -= 1;
-            
-            
-            
-            
+          index -= 1;    
         }
+            
+        $('#refreshButton').on('click', function() {
+        });
+            
+            
+            
+        //$("textarea").autoResize();
       });
     </script>
   </body>
