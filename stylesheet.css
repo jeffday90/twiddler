@@ -1,0 +1,191 @@
+html {
+    background-color: #85e5c2;
+}
+header{
+    border: solid;
+    background-image: url("https://i.imgur.com/Oya6hs5.gif");
+    border-color: black;
+    background-blend-mode: soft-light;
+    border-radius: 25px;
+    margin-left: 20%;
+    margin-right: 20%;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-width: thick;
+}
+
+section,
+aside,
+footer {
+    margin: 0 1.5% 24px 1.5%;
+}
+
+section {
+    margin-top: 20px;
+    float: left;
+    width: 63%;
+    margin-left: 1%;
+    border: solid;
+    border-width: thick;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    background-image: url("https://i.imgur.com/Oya6hs5.gif");
+    background opacity: .25;
+}
+aside {
+    float: right;
+    width: 30%;
+    border: solid;
+    margin-bottom: inherit;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    background-image: url("https://i.imgur.com/Oya6hs5.gif");
+    height: 400px;
+}
+footer {
+    clear: both;
+    margin-bottom: 0;
+    color: #648880;
+    background color: black;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: black;
+    font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+h3 {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+h5 {
+    font-size: 25px;
+    text-align: center;
+    font-family: Georgia, Times, "Times New Roman", serif;
+    margin-bottom: 30px;
+    display: inline;
+    border: solid;
+    border-color: black;
+    background: white;
+    color: black;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    margin-top: 20px;
+    
+}
+
+h6 {
+    text-align: right;
+    font-size: 10px;
+    color: black;
+}
+
+h7 {
+    margin: center;
+    font-size: 10px;
+}
+
+#stream {
+    margin-left: -20%;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+#twiddleEntry {
+    margin-right 100px;
+    margin-bottom: 30px;
+    margin-top: auto;
+    margin-left: inherit;
+    text-align: right;
+}
+
+
+
+#signInEntry {
+    margin-right 100px;
+    margin-bottom: 30px;
+    margin-top: auto;
+    margin-left: 100px;
+    text-align: left;
+}
+
+.tweet {
+    margin-left: 20%;
+    margin-right: 3%;
+    background-color: white;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    border-width: thick;
+    height: 30px;
+    margin-top: 15px;
+    border: solid;
+    text-align: left;
+    border-collapse: inherit;
+    
+    
+/*
+    
+    
+    
+  background: tan;
+  padding: 20px; 
+  width: 600px;
+  height: 40px; 
+    border-style: outset;
+    
+
+*/
+}
+
+button{
+    background: skyblue;
+    color: black;
+    border:outset;
+    border-radius: 25px;
+    border-color: black;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    position:relative;
+    height:30px;
+    font-size:1em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    text-align: center;
+}
+
+button:hover{
+    background: 00FFFF;
+    color:gray;
+}
+button:before,button:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    transition:400ms ease all;
+}
+button:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+button:hover:before,button:hover:after{
+  width:100%;
+}
+
+
+#twiddleTitle {
+    text-align: 50%;
+    font-feature-settings: normal;
+    border: thick;
+    margin-top: 20px;
+}
+
+
+.date {
+    opacity: .5;
+    text-align: right;
+    font-size: 8px;
+}
