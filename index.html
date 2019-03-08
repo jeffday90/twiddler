@@ -3,72 +3,74 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
-    <link rel="stylesheet" type="text/css" href="twittler.css">
-    
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
   <body>
-    <div id="main">
-      <div id="header">
-        <h2>Twiddler</h2>
-        <h7>------your friendly neighborhood twitter knock-off*</h7>
+    <header>
+          <h2>Twiddler</h2>
+            <h7>------your friendly neighborhood twitter knock-off*</h7>
+    </header>
+      <div id="twiddleTitle">
+            <h5>the Twiddler Stream:</h5>
       </div>
-        <section class="container">
-            <div class="signInEntry">
-                <textarea>Enter your tWiDdLe HaNdLe:</textarea>
-                <button>Sign In</button>
-        </div>
-             <div class="twiddleEntry">
-                <textarea>What's on your mind?!?!?</textarea>
-                <button>Twiddle away, buddy!</button>
-        </div>
-       </section>
-        <div id="twiddleTitle">
-            <h5>The TWIDDLE Stream:</h5>
-        </div>
-      <div id="stream">
+    <section>
+        <div id="stream">
           <p></p>
-      </div>
-        <div id = "refresh">
-        <button>Refresh the page</button>
         </div>
-    </div>
-      <div id="footer">
+    </section>
+    <aside>
+        <div class="signInEntry">
+            <textarea>Enter your tWiDdLe HaNdLe:</textarea>
+            <button>Sign In</button>
+        </div>
+        <div class="twiddleEntry">
+            <textarea>What's on your mind?!?!?</textarea>
+            <button>Twiddle away, buddy!</button>
+        </div>    
+    </aside>    
+    <footer>
+        <div id="footer">
         <h6>by: Jeff Day ©</h6>
-      </div>
-  </body>
+      </div>  
+    
+    </footer>
+    
+    
+
     <script>
         $(document).ready(function(){ 
-        var $stream = $('#stream').slideDown(1000);
-        $stream.html('');
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.addClass('tweet');
-          $tweet.text('@' + tweet.user + ': ' + 
-            tweet.message);
+                tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
+                setInterval(tweetRun, 5000);
+        });
+        
+        function tweetRun () {
+            var $stream = $('#stream');
+            $stream.html('');        
+            var index = streams.home.length - 1;
+        
+            while(index >= 0){
+                var tweet = streams.home[index];
+                var $tweet = $('<div></div>');
+                $tweet.addClass('tweet');
+                $tweet.text('@' + tweet.user + ': ' + 
+                tweet.message);
             
-            var $date = $('<div></div>');
-            $date.addClass('date');
-            $date.text('\n\nTwiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
+                var $date = $('<div></div>');
+                $date.addClass('date');
+                $date.text('\n\nTwiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
                        (tweet.created_at.getDate()) + '-' + 
                        (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()) 
 //                        (tweet.created_at.getMinutes()).slice(-2)
-                    );
+                );
             
-          $tweet.appendTo($stream);
-           $date.appendTo($tweet);
+            $tweet.appendTo($stream);
+            $date.appendTo($tweet);
           index -= 1;    
+            }
         }
-            
-        $('#refreshButton').on('click', function() {
-        });
-            
-            
-            
-        //$("textarea").autoResize();
-      });
     </script>
   </body>
     
 </html>
+
+

@@ -17,20 +17,12 @@ body {
     background-blend-mode: soft-light;
     border: thick;
     border color: black;
+    margin-left 20px;
 }
 
 
 #header { 
-    border: solid;
-    background-image: url("https://i.imgur.com/Oya6hs5.gif");
-    border-color: black;
-    border-radius: 25px;
-    border-radius: 25px;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-bottom: 10px;
-    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
-    border-width: thick;
+   
 
 }
 
@@ -64,8 +56,15 @@ h5 {
     font-size: 25px;
     text-align: center;
     font-family: courier;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     display: inline;
+    border: solid;
+    border-color: white;
+    background: black;
+    color: white;
+    font-family: 'Papyrus', fantasy;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     
 }
 
@@ -82,6 +81,7 @@ h7 {
 
 #stream {
     margin: auto;
+    margin-bottom: 15px;
 }
 
 #twiddleEntry {
@@ -92,26 +92,7 @@ h7 {
     text-align: right;
 }
 
-.container {
-    width: 80%;
-    height: 100px;
-    margin: auto;
-    padding: 10px;
-    text-align: center;
-}
 
-.one {
-    width: 15%;
-    height: 200px;
-    background: red;
-    float: left;
-    margin-bottom: 20px;
-}
-
-.two {
-    margin-right: 30%;
-    background: black;
-}
 
 
 #signInEntry {
@@ -131,10 +112,9 @@ h7 {
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     border-width: thick;
     height: 40px;
-    margin-top: 5px;
+    margin-top: 15px;
     border: solid;
-    text-align: center;
-    border-collapse: inherit;
+    text-align: left;
     
     
 /*
@@ -207,7 +187,7 @@ button:hover:before,button:hover:after{
 
 .date {
     opacity: .5;
-    text-align: center;
+    text-align: right;
     font-size: 8px;
     border-style: 1px  outset  #d2e3ed;
 }
