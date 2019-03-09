@@ -11,22 +11,22 @@
             <h7>------your friendly neighborhood twitter knock-off*</h7>
     </header>
       <div id="twiddleTitle">
-          <h5>the </h5>
                 <h4 style="display:inline">Twiddler</h4>
-            <h5>Stream:</h5>
+            <h5 style="margin-left:0px">Stream:</h5>
       </div>
-    <section>
+    <section onclick="userSelect(null)">
         <div id="stream">
         </div>
     </section>
     <aside>
+        <h8>Wanna Twiddle?</h8>
         <div class="signInEntry">
             <textarea>Enter your tWiDdLe HaNdLe:</textarea>
             <button>Sign In</button>
         </div>
         <div class="twiddleEntry">
             <textarea>What's on your mind?!?!?</textarea>
-            <button>Twiddle away, buddy!</button>
+            <button style="float:bottom">Twiddle away, buddy!</button>
         </div>    
     </aside>    
     <footer>
@@ -39,16 +39,31 @@
     
 
     <script> 
+        //buttons  do not have functionality :(
+        
         $(document).ready(function(){ 
                 tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
                 setInterval(tweetRun, 5000);
         });
         
+        
+//        
+        function userSelect(user) {
+            var userNameSelect = user;
+            tweetRun();
+        }
+        
+        
         function tweetRun () {
             var $stream = $('#stream');
-            $stream.html('');        
+            $stream.html('');
             var index = streams.home.length - 1;
-        
+//
+//            if (userName) {
+//                index = streams.users[userName].length-1;
+//            }
+//            
+            
             while(index >= 0){
                 var tweet = streams.home[index];
                 var $tweet = $('<div></div>');
