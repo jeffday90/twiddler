@@ -47,10 +47,12 @@ aside {
     float: right;
     width: 30%;
     border: solid;
-    margin-bottom: inherit;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     background-image: url("https://i.imgur.com/Oya6hs5.gif");
-    height: 400px;
+    height: 370px;
+    border-radius: 25px;
+    margin-top: -40px;
+    align-content: center;
 }
 footer {
     clear: both;
@@ -143,12 +145,33 @@ h7 {
     font-family: 'Papyrus', fantasy;
 }
 
+h8{
+    font-size: 40px;
+    display: inline;
+	position: relative;
+    letter-spacing: -5px;
+	color: rgba(0,0,255,0.5);
+    border-color: black;
+    border: solid;
+    border-top-left-radius: 23px;
+    background-color: #F9F5F1;
+    border-color: black;
+    margin-bottom: 20px;
+}
+
+h8:after {
+    content: "Wanna Twiddle";
+	position: absolute; left: 1px; top: 2px;
+	color: rgba(255,0,0,0.5);   
+}
+
+
 /*title bar above tweet */
 
 #twiddleTitle {
     text-align: 50%;
     font-feature-settings: normal;
-    border: thick;
+    border-width: thick;
     margin-top: 20px;
    
 }
@@ -194,6 +217,12 @@ h7 {
     background: #F9F5F1;
     border-radius: 10px;
     font-family: Georgia, Times, "Times New Roman", serif;
+}
+    
+.tweet:hover {
+    background-color: yellow;
+    transition:400ms ease all;
+}
     
 /*
     
@@ -213,21 +242,12 @@ h7 {
 
 
 #twiddleEntry {
-    margin-right 100px;
-    margin-bottom: 30px;
-    margin-top: auto;
-    margin-left: inherit;
-    text-align: right;
+    align-content: center;
 }
 
 
 
 #signInEntry {
-    margin-right 100px;
-    margin-bottom: 30px;
-    margin-top: auto;
-    margin-left: 100px;
-    text-align: left;
 }
 
 /* button */
@@ -236,7 +256,7 @@ button{
     background: skyblue;
     color: black;
     border:outset;
-    border-radius: 25px;
+    border-radius: 10px;
     border-color: black;
     box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
     position:relative;
@@ -247,12 +267,14 @@ button{
     transition:800ms ease all;
     outline:none;
     text-align: center;
+    align-content: center;
 }
 
 button:hover{
     background: 00FFFF;
     color:gray;
 }
+
 button:before,button:after{
     content:'';
     position:absolute;
