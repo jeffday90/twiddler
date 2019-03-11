@@ -11,27 +11,27 @@
             <h7>------your friendly neighborhood twitter knock-off*</h7>
     </header>
       <div id="twiddleTitle">
-                <h4 style="display:inline">Twiddler   </h4>
-            <h5 style="margin-left:0px">Stream:</h5>
+                <h3>Take a lil Twiddle in the Twiddler Stream:&nbsp;&nbsp;&nbsp;&nbsp;</h4>
       </div>
+      <div id="signInEntry" style="position:absolute; left:69%; top:100px;">
+            <input type="text" name="inputBox" placeholder="User-Name">
+            <button>Sign In</button>
+        </div>
+        <div id="twiddleEntry" style="position:absolute; left:69%; top:150px;">
+            <input type="text" name="inputBox" placeholder="enter your Twiddle here">
+            <button>Twiddle away, buddy!</button>
+        </div>    
     <section>
         <div id="stream">
         </div>
     </section>
     <aside>
-        <h8>Wanna Twiddle?</h8>
-        <div class="signInEntry">
-            <textarea>Enter your tWiDdLe HaNdLe:</textarea>
-            <button>Sign In</button>
-        </div>
-        <div class="twiddleEntry">
-            <textarea>What's on your mind?!?!?</textarea>
-            <button style="float:bottom">Twiddle away, buddy!</button>
-        </div>    
+        
     </aside>    
     <footer>
         <div id="footer">
-        <h9> Twiddles Auto-Refresh ... click on a User Name at any point to view Twiddles!!!  </h9>
+        <p> NOTE: Twiddles Auto-Refresh <br>
+            Click on a User-Name to view their Twiddles!!!  <p>
         <h6>by: Jeff Day ©</h6>
       </div>  
     
@@ -43,7 +43,7 @@
         //buttons  do not have functionality :(
         
         $(document).ready(function(){     
-            tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
+            tweetRun(); //run tweets every 8000 miliseconds -- will function as self-updating
             setInterval(tweetRun, 8000);
         
         });
