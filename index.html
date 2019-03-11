@@ -11,10 +11,10 @@
             <h7>------your friendly neighborhood twitter knock-off*</h7>
     </header>
       <div id="twiddleTitle">
-                <h4 style="display:inline">Twiddler</h4>
+                <h4 style="display:inline">Twiddler   </h4>
             <h5 style="margin-left:0px">Stream:</h5>
       </div>
-    <section onclick="userSelect(null)">
+    <section>
         <div id="stream">
         </div>
     </section>
@@ -31,6 +31,7 @@
     </aside>    
     <footer>
         <div id="footer">
+        <h9> Twiddles Auto-Refresh ... click on a User Name at any point to view Twiddles!!!  </h9>
         <h6>by: Jeff Day ©</h6>
       </div>  
     
@@ -41,31 +42,28 @@
     <script> 
         //buttons  do not have functionality :(
         
-        $(document).ready(function(){ 
-                tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
-                setInterval(tweetRun, 5000);
+        $(document).ready(function(){     
+            tweetRun(); //run tweets every 5000 miliseconds -- will function as self-updating
+            setInterval(tweetRun, 8000);
+        
         });
         
-        
-//        
-        function userSelect(user) {
-            var userNameSelect = user;
-            tweetRun();
-        }
-        
-        
-        function tweetRun () {
+        function tweetRun(userName){
+            
             var $stream = $('#stream');
             $stream.html('');
-            var index = streams.home.length - 1;
-//
-//            if (userName) {
-//                index = streams.users[userName].length-1;
-//            }
-//            
+
+            var theStream;
             
+            theStream = streams.home;
+            
+            if (userName) {
+                theStream = streams.users[userName];
+            }
+            
+            var index = theStream.length - 1;
             while(index >= 0){
-                var tweet = streams.home[index];
+                var tweet = theStream[index];
                 var $tweet = $('<div></div>');
                 $tweet.addClass('tweet');
                 $tweet.text(tweet.message);
@@ -73,12 +71,17 @@
                 var $userName = $('<div></div>');
                 $userName.addClass('userName');
                 $userName.text('@' + tweet.user).css("float","left");
-            
+                
+                $userName.click(function(){
+                    tweetRun($(this).text().slice(1));
+                });
+
                 var $date = $('<div></div>');
                 $date.addClass('date');
                 $date.text('Twiddle created at Date: ' + (tweet.created_at.getMonth() + 1) + '-' + 
                        (tweet.created_at.getDate()) + '-' + 
                        (tweet.created_at.getFullYear()) + ' // Time: ' + (tweet.created_at.getHours()) + ':' + (tweet.created_at.getMinutes()));
+                
             
             $tweet.appendTo($stream);
             $userName.prependTo($tweet);
@@ -86,7 +89,7 @@
             index -= 1;    
             }
         }
-         
+        
     </script>
   </body>
     

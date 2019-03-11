@@ -114,6 +114,8 @@ h4 {
     border-color: black;
     background-color: #F9F5F1;
     margin-left: 30px;
+    width: 150%;
+    height: auto;
 }
 
 h4:after {
@@ -131,6 +133,8 @@ h5 {
     color: black;
     margin-top: 20px;
     margin-left: 5%;
+    font-style: oblique;
+    
 }
 
 h6 {
@@ -163,6 +167,16 @@ h8:after {
     content: "Wanna Twiddle";
 	position: absolute; left: 1px; top: 2px;
 	color: rgba(255,0,0,0.5);   
+}
+
+h9 {
+    border: solid;
+    border-color: black;
+    color: black;
+    background: #F9F5F1;
+    margin-left: 120px;
+    border-radius: 10px;
+    font-family: Georgia, Times, "Times New Roman", serif;
 }
 
 
